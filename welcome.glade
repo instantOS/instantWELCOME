@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Generated with glade 3.22.1 -->
+<interface>
+  <requires lib="gtk+" version="3.20"/>
+  <object class="GtkImage" id="github">
+    <property name="visible">True</property>
+    <property name="can_focus">False</property>
+    <property name="icon_name">github</property>
+  </object>
+  <object class="GtkImage" id="youtube">
+    <property name="visible">True</property>
+    <property name="can_focus">False</property>
+    <property name="icon_name">youtube</property>
+  </object>
+  <object class="GtkWindow" id="window">
+    <property name="name">Welcome</property>
+    <property name="width_request">487</property>
+    <property name="height_request">251</property>
+    <property name="can_focus">False</property>
+    <property name="title" translatable="yes">Welcome</property>
+    <property name="icon_name">install</property>
+    <signal name="destroy" handler="window_destroy_cb" swapped="no"/>
+    <child>
+      <placeholder/>
+    </child>
+    <child>
+      <object class="GtkFixed" id="fixed">
+        <property name="visible">True</property>
+        <property name="can_focus">False</property>
+        <property name="resize_mode">immediate</property>
+        <child>
+          <object class="GtkButton" id="githubbutton">
+            <property name="label" translatable="yes">GitHub</property>
+            <property name="width_request">230</property>
+            <property name="height_request">60</property>
+            <property name="visible">True</property>
+            <property name="can_focus">True</property>
+            <property name="receives_default">True</property>
+            <property name="tooltip_text" translatable="yes">fasf</property>
+            <property name="image">github</property>
+            <signal name="clicked" handler="on_githubbutton_clicked" swapped="no"/>
+          </object>
+          <packing>
+            <property name="x">117</property>
+            <property name="y">75</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkButton" id="youtubebutton">
+            <property name="label" translatable="yes">Get Started</property>
+            <property name="width_request">230</property>
+            <property name="height_request">60</property>
+            <property name="visible">True</property>
+            <property name="can_focus">True</property>
+            <property name="receives_default">True</property>
+            <property name="image">youtube</property>
+            <signal name="clicked" handler="on_youtubebutton_clicked" swapped="no"/>
+          </object>
+          <packing>
+            <property name="x">117</property>
+            <property name="y">149</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkLabel">
+            <property name="width_request">230</property>
+            <property name="height_request">60</property>
+            <property name="visible">True</property>
+            <property name="can_focus">False</property>
+            <property name="label" translatable="yes">Welcome to instantOS</property>
+          </object>
+          <packing>
+            <property name="x">117</property>
+            <property name="y">9</property>
+          </packing>
+        </child>
+      </object>
+    </child>
+  </object>
+</interface>
