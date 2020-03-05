@@ -1,6 +1,11 @@
 #!/bin/bash
 
-python3 welcome.py &
+echo "welcome to instantOS"
+if [ -e welcome.py ]; then
+    python3 welcome.py &
+else
+    python3 /usr/share/instantwelcome/welcome.py
+fi
 
 while :; do
     sleep 0.2
