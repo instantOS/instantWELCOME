@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 import webbrowser
 import gi
-import os
+import subprocess
 import pathlib
 gi.require_version('Gtk', '3.0')
 from gi.repository import Gtk
@@ -19,12 +19,10 @@ class Handler:
 
     def starttoggle_toggled_cb(self, button):
         if button.get_active():
-            if not os.path.exists(os.environ['HOME'] + '/.cache/instantautostart'):
-                pathlib.Path(os.environ['HOME'] + '/.cache/instantautostart').touch
+            subprocess.run(['iconf', 'welcome', '1'])
             print("startup active")
         else:
-            if os.path.exists(os.environ['HOME'] + '/.cache/instantautostart'):
-                os.remove(os.environ['HOME'] + '/.cache/instantautostart')
+            subprocess.run(['iconf', 'welcome', '0'])
             print("startup inactive")
 
 builder = Gtk.Builder()
