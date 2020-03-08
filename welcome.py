@@ -1,9 +1,9 @@
 #!/usr/bin/env python3
 import webbrowser
 import gi
+gi.require_version('Gtk', '3.0')
 import subprocess
 import pathlib
-gi.require_version('Gtk', '3.0')
 from gi.repository import Gtk
 
 
@@ -15,7 +15,8 @@ class Handler:
         webbrowser.open_new_tab('https://github.com/instantos')
 
     def on_youtubebutton_clicked(self, button):
-        webbrowser.open_new_tab('https://www.youtube.com/playlist?list=PLczWCikHiuy_2fBZ_ttJuybBXVERrJDAu')
+        webbrowser.open_new_tab(
+            'https://www.youtube.com/playlist?list=PLczWCikHiuy_2fBZ_ttJuybBXVERrJDAu')
 
     def starttoggle_toggled_cb(self, button):
         if button.get_active():
@@ -25,8 +26,9 @@ class Handler:
             subprocess.run(['iconf', 'welcome', '0'])
             print("startup inactive")
 
+
 builder = Gtk.Builder()
-builder.add_from_file("welcome.glade")
+builder.add_from_file("/usr/share/instantwelcome/welcome.glade")
 builder.connect_signals(Handler())
 
 window = builder.get_object('window')
