@@ -12,9 +12,11 @@ class Handler:
         Gtk.main_quit()
 
     def on_githubbutton_clicked(self, button):
+        subprocess.run(['xdotool', 'key', 'super+2'])
         webbrowser.open_new_tab('https://github.com/instantos')
 
     def on_youtubebutton_clicked(self, button):
+        subprocess.run(['xdotool', 'key', 'super+2'])
         webbrowser.open_new_tab(
             'https://www.youtube.com/playlist?list=PLczWCikHiuy_2fBZ_ttJuybBXVERrJDAu')
 
