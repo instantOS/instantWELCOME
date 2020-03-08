@@ -25,10 +25,17 @@ class Handler:
         else:
             subprocess.run(['iconf', 'welcome', '0'])
             print("startup inactive")
-
+    def quit_clicked_cb(self, button):
+        Gtk.main_quit()
 
 builder = Gtk.Builder()
-builder.add_from_file("/usr/share/instantwelcome/welcome.glade")
+
+if pathlib.Path('./welcome.glade'):
+    builder.add_from_file("./welcome.glade")
+else:
+    builder.add_from_file("/usr/share/instantwelcome/welcome.glade")
+
+
 builder.connect_signals(Handler())
 
 window = builder.get_object('window')
