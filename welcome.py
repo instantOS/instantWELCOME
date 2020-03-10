@@ -6,6 +6,7 @@ import subprocess
 import pathlib
 from gi.repository import Gtk
 
+# won't show icons otherwise
 settings = Gtk.Settings.get_default()
 settings.props.gtk_button_images = True
 
@@ -34,7 +35,7 @@ class Handler:
 
 builder = Gtk.Builder()
 
-if pathlib.Path('./welcome.glade'):
+if pathlib.Path('./welcome.glade').exists():
     builder.add_from_file("./welcome.glade")
 else:
     builder.add_from_file("/usr/share/instantwelcome/welcome.glade")

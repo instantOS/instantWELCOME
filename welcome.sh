@@ -1,5 +1,11 @@
 #!/bin/bash
 
+########################################################
+## Welcome app for instantOS, starts after first boot ##
+########################################################
+
+# wrapper to center it on the screen
+
 echo "welcome to instantOS"
 if [ -e welcome.py ]; then
     python3 welcome.py &
