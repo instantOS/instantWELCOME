@@ -6,6 +6,8 @@ import subprocess
 import pathlib
 from gi.repository import Gtk
 
+settings = Gtk.Settings.get_default()
+settings.props.gtk_button_images = True
 
 class Handler:
     def window_destroy_cb(self, *args):
