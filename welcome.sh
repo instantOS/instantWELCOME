@@ -22,6 +22,4 @@ while :; do
     fi
 done
 
-xdotool key super+shift+space
-sleep 0.2
 xdotool key super+alt+w
