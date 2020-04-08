@@ -5,62 +5,35 @@
   <object class="GtkImage" id="github">
     <property name="visible">True</property>
     <property name="can_focus">False</property>
+    <property name="margin_bottom">10</property>
+    <property name="pixel_size">50</property>
     <property name="icon_name">github</property>
   </object>
-  <object class="GtkImage" id="youtube">
+  <object class="GtkImage" id="qui">
     <property name="visible">True</property>
     <property name="can_focus">False</property>
-    <property name="icon_name">youtube</property>
+    <property name="margin_bottom">10</property>
+    <property name="pixel_size">50</property>
+    <property name="icon_name">emblem-insync-error</property>
   </object>
   <object class="GtkWindow" id="window">
-    <property name="name">Welcome</property>
+    <property name="name">window</property>
     <property name="width_request">500</property>
-    <property name="height_request">365</property>
+    <property name="height_request">200</property>
     <property name="can_focus">False</property>
-    <property name="title" translatable="yes">Welcome</property>
-    <property name="icon_name">install</property>
     <signal name="destroy" handler="window_destroy_cb" swapped="no"/>
     <child type="titlebar">
       <placeholder/>
     </child>
     <child>
-      <object class="GtkFixed" id="fixed">
+      <object class="GtkBox">
         <property name="visible">True</property>
         <property name="can_focus">False</property>
-        <property name="resize_mode">immediate</property>
-        <child>
-          <object class="GtkButton" id="githubbutton">
-            <property name="label" translatable="yes">GitHub</property>
-            <property name="width_request">230</property>
-            <property name="height_request">60</property>
-            <property name="visible">True</property>
-            <property name="can_focus">True</property>
-            <property name="receives_default">True</property>
-            <property name="tooltip_text" translatable="yes">fasf</property>
-            <property name="image">github</property>
-            <signal name="clicked" handler="on_githubbutton_clicked" swapped="no"/>
-          </object>
-          <packing>
-            <property name="x">125</property>
-            <property name="y">75</property>
-          </packing>
-        </child>
-        <child>
-          <object class="GtkButton" id="youtubebutton">
-            <property name="label" translatable="yes">Get Started</property>
-            <property name="width_request">230</property>
-            <property name="height_request">60</property>
-            <property name="visible">True</property>
-            <property name="can_focus">True</property>
-            <property name="receives_default">True</property>
-            <property name="image">youtube</property>
-            <signal name="clicked" handler="on_youtubebutton_clicked" swapped="no"/>
-          </object>
-          <packing>
-            <property name="x">125</property>
-            <property name="y">149</property>
-          </packing>
-        </child>
+        <property name="margin_left">32</property>
+        <property name="margin_right">39</property>
+        <property name="margin_top">6</property>
+        <property name="orientation">vertical</property>
+        <property name="homogeneous">True</property>
         <child>
           <object class="GtkLabel" id="title">
             <property name="width_request">230</property>
@@ -73,25 +46,54 @@
             </attributes>
           </object>
           <packing>
-            <property name="x">125</property>
-            <property name="y">9</property>
+            <property name="expand">False</property>
+            <property name="fill">True</property>
+            <property name="position">0</property>
           </packing>
         </child>
         <child>
-          <object class="GtkCheckButton" id="starttoggle">
-            <property name="label" translatable="yes">show welcome app at startup</property>
-            <property name="width_request">230</property>
-            <property name="height_request">21</property>
+          <object class="GtkButton" id="githubbutton">
+            <property name="label" translatable="yes">GitHub</property>
+            <property name="width_request">50</property>
+            <property name="height_request">50</property>
             <property name="visible">True</property>
             <property name="can_focus">True</property>
-            <property name="receives_default">False</property>
-            <property name="active">True</property>
-            <property name="draw_indicator">True</property>
-            <signal name="toggled" handler="starttoggle_toggled_cb" swapped="no"/>
+            <property name="receives_default">True</property>
+            <property name="tooltip_text" translatable="yes">fasf</property>
+            <property name="margin_top">10</property>
+            <property name="margin_bottom">10</property>
+            <property name="hexpand">True</property>
+            <property name="vexpand">True</property>
+            <property name="image">github</property>
+            <property name="image_position">top</property>
+            <property name="always_show_image">True</property>
+            <signal name="clicked" handler="on_githubbutton_clicked" swapped="no"/>
           </object>
           <packing>
-            <property name="x">124</property>
-            <property name="y">301</property>
+            <property name="expand">False</property>
+            <property name="fill">True</property>
+            <property name="position">1</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkButton" id="youtubebutton">
+            <property name="label" translatable="yes">Get Started</property>
+            <property name="width_request">230</property>
+            <property name="height_request">60</property>
+            <property name="visible">True</property>
+            <property name="can_focus">True</property>
+            <property name="receives_default">True</property>
+            <property name="margin_top">10</property>
+            <property name="margin_bottom">10</property>
+            <property name="image">youtube</property>
+            <property name="image_position">top</property>
+            <property name="always_show_image">True</property>
+            <signal name="clicked" handler="on_youtubebutton_clicked" swapped="no"/>
+          </object>
+          <packing>
+            <property name="expand">False</property>
+            <property name="fill">True</property>
+            <property name="position">2</property>
           </packing>
         </child>
         <child>
@@ -102,14 +104,44 @@
             <property name="visible">True</property>
             <property name="can_focus">True</property>
             <property name="receives_default">True</property>
+            <property name="margin_top">10</property>
+            <property name="margin_bottom">10</property>
+            <property name="image">qui</property>
+            <property name="image_position">top</property>
+            <property name="always_show_image">True</property>
             <signal name="clicked" handler="quit_clicked_cb" swapped="no"/>
           </object>
           <packing>
-            <property name="x">125</property>
-            <property name="y">221</property>
+            <property name="expand">False</property>
+            <property name="fill">True</property>
+            <property name="position">3</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkCheckButton" id="starttoggle">
+            <property name="label" translatable="yes">show welcome app at startup</property>
+            <property name="visible">True</property>
+            <property name="can_focus">True</property>
+            <property name="receives_default">False</property>
+            <property name="margin_left">131</property>
+            <property name="active">True</property>
+            <property name="draw_indicator">True</property>
+            <signal name="toggled" handler="starttoggle_toggled_cb" swapped="no"/>
+          </object>
+          <packing>
+            <property name="expand">False</property>
+            <property name="fill">True</property>
+            <property name="position">4</property>
           </packing>
         </child>
       </object>
     </child>
+  </object>
+  <object class="GtkImage" id="youtube">
+    <property name="visible">True</property>
+    <property name="can_focus">False</property>
+    <property name="margin_bottom">10</property>
+    <property name="pixel_size">50</property>
+    <property name="icon_name">youtube</property>
   </object>
 </interface>
