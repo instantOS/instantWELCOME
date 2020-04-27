@@ -14,14 +14,25 @@ class Handler:
     def window_destroy_cb(self, *args):
         Gtk.main_quit()
 
-    def on_githubbutton_clicked(self, button):
+    def githubbutton_clicked_cb(self, button):
         subprocess.run(['xdotool', 'key', 'super+2'])
         webbrowser.open_new_tab('https://github.com/instantos')
 
-    def on_youtubebutton_clicked(self, button):
+    def supportbutton_clicked_cb(self, button):
+        subprocess.run(['xdotool', 'key', 'super+2'])
+        webbrowser.open_new_tab('https://instantos.github.io/instantos.github.io/support')
+
+    def youtubebutton_clicked_cb(self, button):
         subprocess.run(['xdotool', 'key', 'super+2'])
         webbrowser.open_new_tab(
             'https://www.youtube.com/playlist?list=PLczWCikHiuy_2fBZ_ttJuybBXVERrJDAu')
+
+    def settingsbutton_clicked_cb(self, button):
+        subprocess.run(['xdotool', 'key', 'super+3'])
+        subprocess.Popen('instantsettings')
+    def installbutton_clicked_cb(self, button):
+        subprocess.run(['xdotool', 'key', 'super+3'])
+        subprocess.Popen('pamac-manager')
 
     def starttoggle_toggled_cb(self, button):
         if button.get_active():
@@ -30,7 +41,7 @@ class Handler:
         else:
             subprocess.run(['iconf', 'welcome', '0'])
             print("startup inactive")
-    def quit_clicked_cb(self, button):
+    def quitbutton_clicked_cb(self, button):
         Gtk.main_quit()
 
 builder = Gtk.Builder()
