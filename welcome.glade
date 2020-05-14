@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Generated with glade 3.22.2 -->
+<!-- Generated with glade 3.36.0 -->
 <interface>
   <requires lib="gtk+" version="3.20"/>
   <object class="GtkImage" id="github">
@@ -42,12 +42,17 @@
     <property name="pixel_size">50</property>
     <property name="icon_name">help-about</property>
   </object>
+  <object class="GtkImage" id="youtube">
+    <property name="visible">True</property>
+    <property name="can_focus">False</property>
+    <property name="margin_top">5</property>
+    <property name="margin_bottom">5</property>
+    <property name="pixel_size">50</property>
+    <property name="icon_name">youtube</property>
+  </object>
   <object class="GtkWindow" id="window">
     <property name="can_focus">False</property>
     <signal name="destroy" handler="window_destroy_cb" swapped="no"/>
-    <child type="titlebar">
-      <placeholder/>
-    </child>
     <child>
       <object class="GtkBox">
         <property name="visible">True</property>
@@ -106,7 +111,7 @@
                 <property name="visible">True</property>
                 <property name="can_focus">True</property>
                 <property name="receives_default">True</property>
-                <property name="tooltip_text" translatable="yes">fasf</property>
+                <property name="tooltip_text" translatable="yes">open instantOS settings</property>
                 <property name="margin_left">10</property>
                 <property name="margin_right">10</property>
                 <property name="margin_top">10</property>
@@ -125,13 +130,13 @@
             </child>
             <child>
               <object class="GtkButton" id="installbutton">
-                <property name="label" translatable="yes">Install Application</property>
+                <property name="label" translatable="yes">Install Applications</property>
                 <property name="width_request">50</property>
                 <property name="height_request">50</property>
                 <property name="visible">True</property>
                 <property name="can_focus">True</property>
                 <property name="receives_default">True</property>
-                <property name="tooltip_text" translatable="yes">fasf</property>
+                <property name="tooltip_text" translatable="yes">install applications</property>
                 <property name="margin_left">10</property>
                 <property name="margin_right">10</property>
                 <property name="margin_top">10</property>
@@ -178,7 +183,7 @@
                 <property name="visible">True</property>
                 <property name="can_focus">True</property>
                 <property name="receives_default">True</property>
-                <property name="tooltip_text" translatable="yes">fasf</property>
+                <property name="tooltip_text" translatable="yes">GitHub for source</property>
                 <property name="margin_left">10</property>
                 <property name="margin_right">10</property>
                 <property name="margin_top">10</property>
@@ -203,7 +208,7 @@
                 <property name="visible">True</property>
                 <property name="can_focus">True</property>
                 <property name="receives_default">True</property>
-                <property name="tooltip_text" translatable="yes">fasf</property>
+                <property name="tooltip_text" translatable="yes">Support the project</property>
                 <property name="margin_left">10</property>
                 <property name="margin_right">10</property>
                 <property name="margin_top">10</property>
@@ -249,13 +254,8 @@
         </child>
       </object>
     </child>
-  </object>
-  <object class="GtkImage" id="youtube">
-    <property name="visible">True</property>
-    <property name="can_focus">False</property>
-    <property name="margin_top">5</property>
-    <property name="margin_bottom">5</property>
-    <property name="pixel_size">50</property>
-    <property name="icon_name">youtube</property>
+    <child type="titlebar">
+      <placeholder/>
+    </child>
   </object>
 </interface>
