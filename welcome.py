@@ -4,6 +4,7 @@ import gi
 gi.require_version('Gtk', '3.0')
 import subprocess
 import pathlib
+import os
 from gi.repository import Gtk
 
 # won't show icons otherwise
@@ -31,9 +32,11 @@ class Handler:
         subprocess.run(['xdotool', 'key', 'super+3'])
         subprocess.Popen('instantsettings')
     def installbutton_clicked_cb(self, button):
-        subprocess.run(['xdotool', 'key', 'super+3'])
-        subprocess.Popen('pamac-manager')
-
+        if os.path.exists('/usr/share/liveutils'):
+            subprocess.Popen('/usr/bin/instantosinstaller')
+        else:
+            subprocess.run(['xdotool', 'key', 'super+3'])
+            subprocess.Popen('pamac-manager')
     def starttoggle_toggled_cb(self, button):
         if button.get_active():
             subprocess.run(['iconf', 'welcome', '1'])

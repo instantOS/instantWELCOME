@@ -130,7 +130,7 @@
             </child>
             <child>
               <object class="GtkButton" id="installbutton">
-                <property name="label" translatable="yes">Install Applications</property>
+                <property name="label" translatable="yes">Install</property>
                 <property name="width_request">50</property>
                 <property name="height_request">50</property>
                 <property name="visible">True</property>
