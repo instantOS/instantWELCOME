@@ -1,5 +1,7 @@
 #!/bin/bash
 
+# welcome app for instantOS
+
 welcomemenu() {
     echo '>>b Welcome to instantOS
 :r Get started

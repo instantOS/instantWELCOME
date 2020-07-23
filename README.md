@@ -1,6 +1,9 @@
 # instantWELCOME
-welcome app for instantOS
 
-it is fairly basic at the moment and just provides links to github and youtube
+A welcome app for instantOS
 
-It is built using python, gtk3 and glade
+<p align="center">
+  <img src="https://file.coffee/u/1EIVTTRqj.png">
+</p>
+
+provides easy access to documentation and some basic system functionality
