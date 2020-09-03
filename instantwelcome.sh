@@ -53,7 +53,7 @@ while :; do
             instantosinstaller &
             exit
         else
-            openapp pamac-manager
+            openapp instantpacman
         fi
         ;;
     *startup)
