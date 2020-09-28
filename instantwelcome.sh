@@ -3,14 +3,21 @@
 # welcome app for instantOS
 
 welcomemenu() {
-    echo '>>b Welcome to instantOS
+    if [ -e /usr/share/liveutils ]
+    then
+        INSTALLPROMPT="Install"
+    else
+        INSTALLPROMPT="Software"
+    fi
+
+    echo ">>b Welcome to instantOS
 :r Get started
 :b Settings
-:y Install
+:y $INSTALLPROMPT
 :b GitHub
 :b Support
 :g Enable welcome app on startup
-:r Close' | instantmenu -l 20 -c -h -1 -wm -w -1 -q 'welcome app'
+:r Close" | instantmenu -l 20 -c -h -1 -wm -w -1 -q 'welcome app'
 
 }
 
@@ -55,6 +62,9 @@ while :; do
         else
             openapp instantpacman
         fi
+        ;;
+    *Software)
+            openapp instantpacman
         ;;
     *startup)
         if echo 'enable welcome app on bootup?
