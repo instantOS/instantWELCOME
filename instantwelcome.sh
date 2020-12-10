@@ -14,6 +14,7 @@ welcomemenu() {
 :r Get started
 :b Settings
 :y $INSTALLPROMPT
+:b Documentation
 :b GitHub
 :b Support
 :g Enable welcome app on startup
@@ -49,11 +50,14 @@ while :; do
     *started)
         openbrowser 'https://www.youtube.com/playlist?list=PLczWCikHiuy_2fBZ_ttJuybBXVERrJDAu'
         ;;
+    *Documentation)
+        openbrowser 'https://instantos.io/documentation'
+        ;;
     *GitHub)
         openbrowser "https://github.com/instantOS"
         ;;
     *Support)
-        openbrowser "https://instantos.github.io/instantos.github.io/support"
+        openbrowser "https://instantos.io/support"
         ;;
     *Install)
         if [ -e /usr/share/liveutils ]; then
