@@ -1,0 +1,261 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Generated with glade 3.36.0 -->
+<interface>
+  <requires lib="gtk+" version="3.20"/>
+  <object class="GtkImage" id="github">
+    <property name="visible">True</property>
+    <property name="can_focus">False</property>
+    <property name="margin_top">5</property>
+    <property name="margin_bottom">5</property>
+    <property name="pixel_size">50</property>
+    <property name="icon_name">github</property>
+  </object>
+  <object class="GtkImage" id="install">
+    <property name="visible">True</property>
+    <property name="can_focus">False</property>
+    <property name="margin_top">5</property>
+    <property name="margin_bottom">5</property>
+    <property name="pixel_size">50</property>
+    <property name="icon_name">software</property>
+  </object>
+  <object class="GtkImage" id="quit">
+    <property name="visible">True</property>
+    <property name="can_focus">False</property>
+    <property name="margin_top">5</property>
+    <property name="margin_bottom">5</property>
+    <property name="pixel_size">50</property>
+    <property name="icon_name">emblem-insync-error</property>
+  </object>
+  <object class="GtkImage" id="settings">
+    <property name="visible">True</property>
+    <property name="can_focus">False</property>
+    <property name="margin_top">5</property>
+    <property name="margin_bottom">5</property>
+    <property name="pixel_size">50</property>
+    <property name="icon_name">settings</property>
+  </object>
+  <object class="GtkImage" id="support">
+    <property name="visible">True</property>
+    <property name="can_focus">False</property>
+    <property name="margin_top">5</property>
+    <property name="margin_bottom">5</property>
+    <property name="pixel_size">50</property>
+    <property name="icon_name">help-about</property>
+  </object>
+  <object class="GtkImage" id="youtube">
+    <property name="visible">True</property>
+    <property name="can_focus">False</property>
+    <property name="margin_top">5</property>
+    <property name="margin_bottom">5</property>
+    <property name="pixel_size">50</property>
+    <property name="icon_name">youtube</property>
+  </object>
+  <object class="GtkWindow" id="window">
+    <property name="can_focus">False</property>
+    <signal name="destroy" handler="window_destroy_cb" swapped="no"/>
+    <child>
+      <object class="GtkBox">
+        <property name="visible">True</property>
+        <property name="can_focus">False</property>
+        <property name="orientation">vertical</property>
+        <child>
+          <object class="GtkLabel" id="title">
+            <property name="width_request">230</property>
+            <property name="height_request">60</property>
+            <property name="visible">True</property>
+            <property name="can_focus">False</property>
+            <property name="label" translatable="yes">Welcome to instantOS</property>
+            <attributes>
+              <attribute name="font-desc" value="Cantarell Bold 15"/>
+            </attributes>
+          </object>
+          <packing>
+            <property name="expand">False</property>
+            <property name="fill">True</property>
+            <property name="position">0</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkGrid">
+            <property name="visible">True</property>
+            <property name="can_focus">False</property>
+            <property name="row_homogeneous">True</property>
+            <property name="column_homogeneous">True</property>
+            <child>
+              <object class="GtkButton" id="youtubebutton">
+                <property name="label" translatable="yes">Get Started</property>
+                <property name="width_request">230</property>
+                <property name="height_request">60</property>
+                <property name="visible">True</property>
+                <property name="can_focus">True</property>
+                <property name="receives_default">True</property>
+                <property name="margin_left">10</property>
+                <property name="margin_right">10</property>
+                <property name="margin_top">10</property>
+                <property name="margin_bottom">10</property>
+                <property name="image">youtube</property>
+                <property name="image_position">top</property>
+                <property name="always_show_image">True</property>
+                <signal name="clicked" handler="youtubebutton_clicked_cb" swapped="no"/>
+              </object>
+              <packing>
+                <property name="left_attach">0</property>
+                <property name="top_attach">0</property>
+              </packing>
+            </child>
+            <child>
+              <object class="GtkButton" id="settingsbutton">
+                <property name="label" translatable="yes">Settings</property>
+                <property name="width_request">50</property>
+                <property name="height_request">50</property>
+                <property name="visible">True</property>
+                <property name="can_focus">True</property>
+                <property name="receives_default">True</property>
+                <property name="tooltip_text" translatable="yes">open instantOS settings</property>
+                <property name="margin_left">10</property>
+                <property name="margin_right">10</property>
+                <property name="margin_top">10</property>
+                <property name="margin_bottom">10</property>
+                <property name="hexpand">True</property>
+                <property name="vexpand">True</property>
+                <property name="image">settings</property>
+                <property name="image_position">top</property>
+                <property name="always_show_image">True</property>
+                <signal name="clicked" handler="settingsbutton_clicked_cb" swapped="no"/>
+              </object>
+              <packing>
+                <property name="left_attach">1</property>
+                <property name="top_attach">0</property>
+              </packing>
+            </child>
+            <child>
+              <object class="GtkButton" id="installbutton">
+                <property name="label" translatable="yes">Install</property>
+                <property name="width_request">50</property>
+                <property name="height_request">50</property>
+                <property name="visible">True</property>
+                <property name="can_focus">True</property>
+                <property name="receives_default">True</property>
+                <property name="tooltip_text" translatable="yes">install applications</property>
+                <property name="margin_left">10</property>
+                <property name="margin_right">10</property>
+                <property name="margin_top">10</property>
+                <property name="margin_bottom">10</property>
+                <property name="hexpand">True</property>
+                <property name="vexpand">True</property>
+                <property name="image">install</property>
+                <property name="image_position">top</property>
+                <property name="always_show_image">True</property>
+                <signal name="clicked" handler="installbutton_clicked_cb" swapped="no"/>
+              </object>
+              <packing>
+                <property name="left_attach">2</property>
+                <property name="top_attach">0</property>
+              </packing>
+            </child>
+            <child>
+              <object class="GtkButton" id="quitbutton">
+                <property name="label" translatable="yes">Quit</property>
+                <property name="width_request">230</property>
+                <property name="height_request">60</property>
+                <property name="visible">True</property>
+                <property name="can_focus">True</property>
+                <property name="receives_default">True</property>
+                <property name="margin_left">10</property>
+                <property name="margin_right">10</property>
+                <property name="margin_top">10</property>
+                <property name="margin_bottom">10</property>
+                <property name="image">quit</property>
+                <property name="image_position">top</property>
+                <property name="always_show_image">True</property>
+                <signal name="clicked" handler="quitbutton_clicked_cb" swapped="no"/>
+              </object>
+              <packing>
+                <property name="left_attach">2</property>
+                <property name="top_attach">1</property>
+              </packing>
+            </child>
+            <child>
+              <object class="GtkButton" id="githubbutton">
+                <property name="label" translatable="yes">GitHub</property>
+                <property name="width_request">50</property>
+                <property name="height_request">50</property>
+                <property name="visible">True</property>
+                <property name="can_focus">True</property>
+                <property name="receives_default">True</property>
+                <property name="tooltip_text" translatable="yes">GitHub for source</property>
+                <property name="margin_left">10</property>
+                <property name="margin_right">10</property>
+                <property name="margin_top">10</property>
+                <property name="margin_bottom">10</property>
+                <property name="hexpand">True</property>
+                <property name="vexpand">True</property>
+                <property name="image">github</property>
+                <property name="image_position">top</property>
+                <property name="always_show_image">True</property>
+                <signal name="clicked" handler="githubbutton_clicked_cb" swapped="no"/>
+              </object>
+              <packing>
+                <property name="left_attach">0</property>
+                <property name="top_attach">1</property>
+              </packing>
+            </child>
+            <child>
+              <object class="GtkButton" id="supportbutton">
+                <property name="label" translatable="yes">Support</property>
+                <property name="width_request">50</property>
+                <property name="height_request">50</property>
+                <property name="visible">True</property>
+                <property name="can_focus">True</property>
+                <property name="receives_default">True</property>
+                <property name="tooltip_text" translatable="yes">Support the project</property>
+                <property name="margin_left">10</property>
+                <property name="margin_right">10</property>
+                <property name="margin_top">10</property>
+                <property name="margin_bottom">10</property>
+                <property name="hexpand">True</property>
+                <property name="vexpand">True</property>
+                <property name="image">support</property>
+                <property name="image_position">top</property>
+                <property name="always_show_image">True</property>
+                <signal name="clicked" handler="supportbutton_clicked_cb" swapped="no"/>
+              </object>
+              <packing>
+                <property name="left_attach">1</property>
+                <property name="top_attach">1</property>
+              </packing>
+            </child>
+          </object>
+          <packing>
+            <property name="expand">False</property>
+            <property name="fill">True</property>
+            <property name="position">1</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkCheckButton" id="starttoggle">
+            <property name="label" translatable="yes">show welcome app at startup</property>
+            <property name="visible">True</property>
+            <property name="can_focus">True</property>
+            <property name="receives_default">False</property>
+            <property name="margin_left">20</property>
+            <property name="margin_right">20</property>
+            <property name="margin_top">20</property>
+            <property name="margin_bottom">20</property>
+            <property name="active">True</property>
+            <property name="draw_indicator">True</property>
+            <signal name="toggled" handler="starttoggle_toggled_cb" swapped="no"/>
+          </object>
+          <packing>
+            <property name="expand">False</property>
+            <property name="fill">True</property>
+            <property name="position">2</property>
+          </packing>
+        </child>
+      </object>
+    </child>
+    <child type="titlebar">
+      <placeholder/>
+    </child>
+  </object>
+</interface>
