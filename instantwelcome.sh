@@ -18,19 +18,17 @@ welcomemenu() {
 :b GitHub
 :b Support
 :g Enable welcome app on startup
-:r Close" | instantmenu -l 20 -c -h -1 -wm -w -1 -q 'welcome app'
-
+:r Close" | instantmenu -l 20 -c -h -1 -w -1 -wm -q 'welcome app'
 }
 
 openbrowser() {
-    openapp "firefox --new-window $1"
+    openapp "instantutils open browser $1"
 }
 
 openapp() {
-    pgrep instantsettings && pkill instantsettings
     instantwelcome &
     sleep 0.7
-    xdotool key super+2
+    instantwmctl tag 2
     sleep 0.4
     $1
     exit
